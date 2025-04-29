@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фейерверк</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e2e;
+            color: white;
+            overflow: hidden;
+        }
+        
+        #fireworkButton {
+            background-color: #2aabee;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        #fireworkButton:active {
+            transform: scale(0.96);
+            background-color: #229ed9;
+        }
+        
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <h1>Запустить фейерверк</h1>
+    <button id="fireworkButton">Нажми меня!</button>
+    
+    <script src="app.js"></script>
+</body>
+</html> 
